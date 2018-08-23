@@ -1,18 +1,16 @@
-<!doctype html>
-<html>
-  <head>
-    <link rel="stylesheet" href="../style.css">
-    <title>My First Repository</title>
-  </head>
-  <body>
-    <h1>dhackel353</h1>
-    <p>
-      This is a simple web page for <a href="https://msucsis.github.io/csc425/">CSC-425</a>. My goals this semester are:
-    </p>
-    <ul>
-      <li>Learn</li>
-      <li>Get good grades</li>
-      <li>Have fun</li>
-    </ul>
-  </body>
-</html>
+---
+title: My Project Diary
+layout: main
+---
+
+<p>Dear Project Diary...</p>
+{% for post in site.posts %}
+<article>
+	<h2>{{site.baseurl}}{{post.url}}</h2>
+	{{post.title}}
+	<p>
+		{{post.excerpt}}
+	</p>
+	<p><a href="{{site.baseurl}}{{post.url}}">Continue reading....</a></p>
+</article>
+{% endfor %}
